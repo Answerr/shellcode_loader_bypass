@@ -72,12 +72,8 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 ![Tencent Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/tencent_bypass1.png)
 
 ## Summary
-
-Both `test.cpp` and `bypass1.cpp` demonstrate a variety of techniques to bypass modern security mechanisms. These techniques focus on:
-
-- Evading static and dynamic analysis.
-- Avoiding detection by EDR and AV solutions.
-- Leveraging stealthy execution methods to blend in with legitimate processes.
+test.cpp can bypass tencent,huorong,defender but not 360 because I added an remote injection fucntion on RunTimeBroker.exe
+bypass1.cpp can bypass tencent,huorong,360 but not defender
 
 > **Disclaimer:**  
 > This repository is for educational and research purposes only. The techniques demonstrated here should not be used for malicious purposes. Always ensure compliance with applicable laws and regulations.
