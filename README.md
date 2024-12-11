@@ -57,6 +57,7 @@ The following bypass techniques are implemented in `bypass1.cpp`:
    Allocates memory for shellcode in a stealthy manner, avoiding suspicious patterns that could trigger detection.
 
 **How to Use**
+
 Generate your raw shellcode as a .bin file using your preferred method.
 Rename the file to input.bin and run xor.py. This will generate an encrypted file named output.bin.
 Rename output.bin to shellcode.bin and place it in the same directory as the executable.
