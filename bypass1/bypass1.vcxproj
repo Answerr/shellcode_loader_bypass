@@ -24,7 +24,7 @@
     <ProjectGuid>{39c1481d-cd42-4e6e-8435-35ae9744975e}</ProjectGuid>
     <RootNamespace>bypass1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>tp</ProjectName>
+    <ProjectName>bypass1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

