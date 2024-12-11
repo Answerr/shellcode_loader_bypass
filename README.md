@@ -58,10 +58,11 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 
 **How to Use**
 
-Generate your raw shellcode as a .bin file using your preferred method.
-Rename the file to input.bin and run xor.py. This will generate an encrypted file named output.bin.
-Rename output.bin to shellcode.bin and place it in the same directory as the executable.
-Execute the payload.
+1.Generate your raw shellcode as a .bin file using your preferred method.
+2.Rename the file to input.bin and run xor.py. This will generate an encrypted file named output.bin.
+3.Rename output.bin to shellcode.bin and place it in the same directory as the executable.
+4.Execute the payload.
+
 
 ---
 ## Shellcode Loader Bypass Images  
