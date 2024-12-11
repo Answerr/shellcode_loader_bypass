@@ -56,6 +56,12 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 7. **Stealthy Memory Allocation**  
    Allocates memory for shellcode in a stealthy manner, avoiding suspicious patterns that could trigger detection.
 
+**How to Use**
+Generate your raw shellcode as a .bin file using your preferred method.
+Rename the file to input.bin and run xor.py. This will generate an encrypted file named output.bin.
+Rename output.bin to shellcode.bin and place it in the same directory as the executable.
+Execute the payload.
+
 ---
 ## Shellcode Loader Bypass Images  
 
@@ -71,9 +77,9 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 ### 4. Tencent Bypass  
 ![Tencent Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/tencent_bypass1.png)
 
-## Summary
-test.cpp can bypass tencent,huorong,defender but not 360 because I added an remote injection fucntion on RunTimeBroker.exe
-bypass1.cpp can bypass tencent,huorong,360 but not defender
+**Summary**
+test.cpp: Can bypass Tencent, Huorong, and Defender, but not 360 due to the addition of a remote injection function targeting RuntimeBroker.exe.
+bypass1.cpp: Can bypass Tencent, Huorong, and 360, but not Defender.
 
 > **Disclaimer:**  
 > This repository is for educational and research purposes only. The techniques demonstrated here should not be used for malicious purposes. Always ensure compliance with applicable laws and regulations.
