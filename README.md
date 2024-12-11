@@ -70,6 +70,23 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 
 ### 4. Tencent Bypass  
 ![Tencent Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/tencent_bypass1.png)
+
+# 视频展示  
+
+## 1. 360 Bypass  
+<video src="https://github.com/Answerr/shellcode_loader_bypass/blob/main/videos/360bypass.mp4" controls="controls" style="max-width: 100%;">  
+  Your browser does not support the video tag.  
+</video>  
+
+## 2. Defender Bypass  
+<video src="https://github.com/Answerr/shellcode_loader_bypass/blob/main/videos/defender_bypass.mp4" controls="controls" style="max-width: 100%;">  
+  Your browser does not support the video tag.  
+</video>  
+
+## 3. Tencent & Huorong Bypass  
+<video src="https://github.com/Answerr/shellcode_loader_bypass/blob/main/videos/tencent%26huorong.mp4" controls="controls" style="max-width: 100%;">  
+  Your browser does not support the video tag.  
+</video>  
 ## Summary
 
 Both `test.cpp` and `bypass1.cpp` demonstrate a variety of techniques to bypass modern security mechanisms. These techniques focus on:
