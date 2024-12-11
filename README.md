@@ -60,16 +60,16 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 ## Shellcode Loader Bypass Images  
 
 ### 1. 360 Bypass  
-![360 Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/360_bypass1.png"360BypassExample")  
+![360 Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/360_bypass1.png)  
 
 ### 2. Defender Test  
-![Defender Test](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/Defender_test.png"DefenderTestExample")  
+![Defender Test](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/Defender_test.png)  
 
 ### 3. Huorong Bypass  
-![Huorong Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/huorong_bypass1.png"HuorongBypassExample")  
+![Huorong Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/huorong_bypass1.png)  
 
 ### 4. Tencent Bypass  
-![Tencent Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/tencent_bypass1.png"TencentBypassExample")
+![Tencent Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/tencent_bypass1.png)
 ## Summary
 
 Both `test.cpp` and `bypass1.cpp` demonstrate a variety of techniques to bypass modern security mechanisms. These techniques focus on:
