@@ -84,6 +84,7 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 
 **Summary**
 test.cpp: Can bypass Tencent, Huorong, and Defender, but not 360 due to the addition of a remote injection function targeting RuntimeBroker.exe.
+
 bypass1.cpp: Can bypass Tencent, Huorong, and 360, but not Defender.
 
 > **Disclaimer:**  
