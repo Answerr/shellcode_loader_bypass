@@ -1,74 +1,74 @@
-# Shellcode Loader Bypass Techniques
+# Shellcode Loader 绕过技术  
 
-This repository contains examples of advanced shellcode loader bypass techniques implemented in `test.cpp` and `bypass1.cpp`. These techniques are designed to evade detection and bypass modern security mechanisms, such as EDR (Endpoint Detection and Response) and AV (Antivirus) solutions.
+此仓库包含在 `test.cpp` 和 `bypass1.cpp` 中实现的高级 Shellcode Loader 绕过技术示例。这些技术旨在规避检测并绕过现代安全机制，如 EDR（端点检测与响应）和 AV（杀毒软件）解决方案。  
 
----
+---  
 
-## Techniques in `test.cpp`
+## `test.cpp` 中的技术  
 
-The following bypass techniques are implemented in `test.cpp`:
+以下绕过技术在 `test.cpp` 中实现：  
 
-1. **API Resolution and Dynamic Invocation**  
-   Resolves and invokes APIs dynamically at runtime to avoid static detection.
+1. **API 解析与动态调用**  
+   在运行时动态解析并调用 API，以避免静态检测。  
 
-2. **API Hammering**  
-   Repeatedly calls benign APIs to confuse behavior-based detection mechanisms.
+2. **API Hammering（API 锤击）**  
+   重复调用无害的 API 以混淆基于行为的检测机制。  
 
-3. **String Obfuscation and Decryption**  
-   Obfuscates sensitive strings (e.g., API names, shellcode) and decrypts them at runtime to evade static analysis.
+3. **字符串混淆与解密**  
+   对敏感字符串（如 API 名称、Shellcode）进行混淆，并在运行时解密以规避静态分析。  
 
-4. **NTDLL Restoration and Anti-Hooking**  
-   Restores the original, unhooked version of `ntdll.dll` to bypass user-mode hooks placed by EDRs.
+4. **NTDLL 恢复与反 Hook**  
+   恢复原始、未 Hook 的 `ntdll.dll`，以绕过 EDR 放置的用户模式 Hook。  
 
-5. **Thread Pool Execution of Shellcode**  
-   Executes shellcode using thread pools to blend in with legitimate application behavior.
+5. **线程池执行 Shellcode**  
+   使用线程池执行 Shellcode，以模仿合法的应用程序行为。  
 
-6. **Remote Thread Injection**  
-   Injects shellcode into a remote process to execute payloads stealthily.
+6. **远程线程注入**  
+   将 Shellcode 注入到远程进程中，以隐秘地执行负载。  
 
-7. **Encrypted Shellcode File Loading (`shellcode.bin`)**  
-   Loads and decrypts an encrypted shellcode file (`shellcode.bin`) at runtime to avoid detection.
+7. **加密 Shellcode 文件加载（`shellcode.bin`）**  
+   在运行时加载并解密加密的 Shellcode 文件（`shellcode.bin`），以避免检测。  
 
----
+---  
 
-## Techniques in `bypass1.cpp`
+## `bypass1.cpp` 中的技术  
 
-The following bypass techniques are implemented in `bypass1.cpp`:
+以下绕过技术在 `bypass1.cpp` 中实现：  
 
-1. **API Hashing for Function Resolution**  
-   Resolves API functions using hashed names instead of plaintext strings to evade static analysis.
+1. **API 哈希解析函数**  
+   使用哈希名称而非明文字符串解析 API 函数，以规避静态分析。  
 
-2. **API Hammering**  
-   Similar to `test.cpp`, repeatedly calls benign APIs to confuse behavior-based detection mechanisms.
+2. **API Hammering（API 锤击）**  
+   与 `test.cpp` 类似，重复调用无害的 API 以混淆基于行为的检测机制。  
 
-3. **Dynamic API Resolution**  
-   Dynamically resolves API functions at runtime to avoid static detection.
+3. **动态 API 解析**  
+   在运行时动态解析 API 函数，以避免静态检测。  
 
-4. **Unhooking `ntdll.dll`**  
-   Restores the original, unhooked version of `ntdll.dll` to bypass user-mode hooks.
+4. **解除 `ntdll.dll` Hook**  
+   恢复原始、未 Hook 的 `ntdll.dll`，以绕过用户模式 Hook。  
 
-5. **Encrypted Shellcode File Loading (`shellcode.bin`)**  
-   Loads and decrypts an encrypted shellcode file (`shellcode.bin`) at runtime to avoid detection.
+5. **加密 Shellcode 文件加载（`shellcode.bin`）**  
+   在运行时加载并解密加密的 Shellcode 文件（`shellcode.bin`），以避免检测。  
 
-6. **Thread Pool Execution**  
-   Executes shellcode using thread pools to mimic legitimate application behavior.
+6. **线程池执行**  
+   使用线程池执行 Shellcode，以模仿合法的应用程序行为。  
 
-7. **Stealthy Memory Allocation**  
-   Allocates memory for shellcode in a stealthy manner, avoiding suspicious patterns that could trigger detection.
+7. **隐秘的内存分配**  
+   以隐秘的方式为 Shellcode 分配内存，避免触发可疑模式导致的检测。  
 
-**How to Use**
+---  
 
-   1.Generate your raw shellcode as a .bin file using your preferred method.  
-   
-   2.Rename the file to input.bin and run xor.py. This will generate an encrypted file named output.bin.  
-   
-   3.Rename output.bin to shellcode.bin and place it in the same directory as the executable.  
-   
-   4.Execute the payload.  
+## 使用方法  
 
+1. 使用您首选的方法生成原始 Shellcode 的 `.bin` 文件。  
 
----
-## Shellcode Loader Bypass Images  
+2. 将文件重命名为 `input.bin`，然后运行 `xor.py`。这将生成一个名为 `output.bin` 的加密文件。  
+
+3. 将 `output.bin` 重命名为 `shellcode.bin`，并将其放置在与可执行文件相同的目录中。  
+
+4. 执行负载。  
+
+## Shellcode Loader 绕过截图  
 
 ### 1. 360 Bypass  
 ![360 Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/360_bypass1.png)  
@@ -82,10 +82,15 @@ The following bypass techniques are implemented in `bypass1.cpp`:
 ### 4. Tencent Bypass  
 ![Tencent Bypass](https://github.com/Answerr/shellcode_loader_bypass/blob/main/images/tencent_bypass1.png)
 
-**Summary**
-test.cpp: Can bypass Tencent, Huorong, and Defender, but not 360 due to the addition of a remote injection function targeting RuntimeBroker.exe.
+**总结**  
+`test.cpp`：可以绕过腾讯、火绒和 Defender，但由于添加了针对 RuntimeBroker.exe 的远程注入功能，无法绕过 360。  
 
-bypass1.cpp: Can bypass Tencent, Huorong, and 360, but not Defender.
+`bypass1.cpp`：可以绕过腾讯、火绒和 360，但无法绕过 Defender。  
+
+> **免责声明：**  
+> 此仓库仅供教育和研究用途。此处展示的技术不应用于恶意目的。请始终确保遵守适用的法律法规。  
+
+---  
 
 > **Disclaimer:**  
 > This repository is for educational and research purposes only. The techniques demonstrated here should not be used for malicious purposes. Always ensure compliance with applicable laws and regulations.
