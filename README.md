@@ -1,6 +1,7 @@
 # Shellcode Loader 绕过技术  
 
 此仓库包含在 `test.cpp` 和 `bypass1.cpp` 中实现的高级 Shellcode Loader 绕过技术示例。这些技术旨在规避检测并绕过现代安全机制，如 EDR（端点检测与响应）和 AV（杀毒软件）解决方案。  
+PS:用小于100kb以下的bin较稳定，因为线程池执行的内存分配限制，不然就得牺牲隐蔽性。
 
 ---  
 
