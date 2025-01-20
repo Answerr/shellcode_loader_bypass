@@ -1,8 +1,8 @@
-Shellcode Loader Bypass Techniques
+**Shellcode Loader Bypass Techniques**
 This repository contains examples of advanced Shellcode Loader bypass techniques implemented in test.cpp and bypass1.cpp. These techniques are designed to evade detection and bypass modern security mechanisms such as EDR (Endpoint Detection and Response) and AV (Antivirus) solutions.
 Note: Using binary files smaller than 100kb tends to be more stable due to memory allocation limits imposed by thread pool execution; otherwise, you may need to sacrifice stealth.
 
-Techniques in test.cpp
+**Techniques in test.cpp**
 The following bypass techniques are implemented in test.cpp:
 
 API Resolution and Dynamic Invocation
